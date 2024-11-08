@@ -1,0 +1,53 @@
+2024-11-08 00:43:46,532 p=3493 u=dharan n=ansible | PLAY [Configure NginX and CloudWatch Agent] ********************************************************************************************************************
+2024-11-08 00:43:46,549 p=3493 u=dharan n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************
+2024-11-08 00:43:59,682 p=3493 u=dharan n=ansible | fatal: [54.149.17.81]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '54.149.17.81' (ED25519) to the list of known hosts.\r\nno such identity: /home/dharan/.ssh/dharan-ansible.pem: No such file or directory\r\nubuntu@54.149.17.81: Permission denied (publickey).", "unreachable": true}
+2024-11-08 00:43:59,688 p=3493 u=dharan n=ansible | PLAY RECAP *****************************************************************************************************************************************************
+2024-11-08 00:43:59,691 p=3493 u=dharan n=ansible | 54.149.17.81               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-08 00:47:14,818 p=3666 u=dharan n=ansible | [WARNING]:  * Failed to parse /home/dharan/ansible/inventory.ini with script plugin: problem running /home/dharan/ansible/inventory.ini --list ([Errno 8] Exec
+format error: '/home/dharan/ansible/inventory.ini')
+
+2024-11-08 00:47:14,819 p=3666 u=dharan n=ansible | [WARNING]:  * Failed to parse /home/dharan/ansible/inventory.ini with ini plugin: /home/dharan/ansible/inventory.ini:2: Expected key=value host variable
+assignment, got: ./dharan-ansible.pem
+
+2024-11-08 00:47:14,821 p=3666 u=dharan n=ansible | [WARNING]: Unable to parse /home/dharan/ansible/inventory.ini as an inventory source
+
+2024-11-08 00:47:14,822 p=3666 u=dharan n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-08 00:47:14,833 p=3666 u=dharan n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-11-08 00:47:15,127 p=3666 u=dharan n=ansible | PLAY [Configure NginX and CloudWatch Agent] ********************************************************************************************************************
+2024-11-08 00:47:15,128 p=3666 u=dharan n=ansible | skipping: no hosts matched
+2024-11-08 00:47:15,129 p=3666 u=dharan n=ansible | PLAY RECAP *****************************************************************************************************************************************************
+2024-11-08 00:56:14,852 p=3847 u=dharan n=ansible | PLAY [Configure NginX and CloudWatch Agent] ********************************************************************************************************************
+2024-11-08 00:56:14,867 p=3847 u=dharan n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************
+2024-11-08 00:56:21,204 p=3847 u=dharan n=ansible | fatal: [52.12.56.123]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '52.12.56.123' (ED25519) to the list of known hosts.\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0664 for './dharan-ansible.pem' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"./dharan-ansible.pem\": bad permissions\r\nubuntu@52.12.56.123: Permission denied (publickey).", "unreachable": true}
+2024-11-08 00:56:21,208 p=3847 u=dharan n=ansible | PLAY RECAP *****************************************************************************************************************************************************
+2024-11-08 00:56:21,210 p=3847 u=dharan n=ansible | 52.12.56.123               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-08 00:58:12,785 p=3864 u=dharan n=ansible | PLAY [Configure NginX and CloudWatch Agent] ********************************************************************************************************************
+2024-11-08 00:58:12,802 p=3864 u=dharan n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************
+2024-11-08 00:58:22,349 p=3864 u=dharan n=ansible | ok: [52.12.56.123]
+2024-11-08 00:58:22,377 p=3864 u=dharan n=ansible | TASK [Install NginX] *******************************************************************************************************************************************
+2024-11-08 00:58:51,806 p=3864 u=dharan n=ansible | changed: [52.12.56.123]
+2024-11-08 00:58:51,823 p=3864 u=dharan n=ansible | TASK [Install CloudWatch Agent] ********************************************************************************************************************************
+2024-11-08 00:58:56,433 p=3864 u=dharan n=ansible | fatal: [52.12.56.123]: FAILED! => {"changed": false, "msg": "No package matching 'amazon-cloudwatch-agent' is available"}
+2024-11-08 00:58:56,439 p=3864 u=dharan n=ansible | PLAY RECAP *****************************************************************************************************************************************************
+2024-11-08 00:58:56,441 p=3864 u=dharan n=ansible | 52.12.56.123               : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-08 01:14:13,904 p=4078 u=dharan n=ansible | PLAY [Configure NginX and CloudWatch Agent] ********************************************************************************************************************
+2024-11-08 01:14:13,919 p=4078 u=dharan n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************
+2024-11-08 01:14:23,101 p=4078 u=dharan n=ansible | ok: [44.243.70.217]
+2024-11-08 01:14:23,126 p=4078 u=dharan n=ansible | TASK [Install NginX] *******************************************************************************************************************************************
+2024-11-08 01:14:47,141 p=4078 u=dharan n=ansible | changed: [44.243.70.217]
+2024-11-08 01:14:47,156 p=4078 u=dharan n=ansible | TASK [Download CloudWatch Agent package] ***********************************************************************************************************************
+2024-11-08 01:15:02,487 p=4078 u=dharan n=ansible | changed: [44.243.70.217]
+2024-11-08 01:15:02,497 p=4078 u=dharan n=ansible | TASK [Install CloudWatch Agent] ********************************************************************************************************************************
+2024-11-08 01:15:09,554 p=4078 u=dharan n=ansible | changed: [44.243.70.217]
+2024-11-08 01:15:09,577 p=4078 u=dharan n=ansible | TASK [Enable and Start CloudWatch Agent] ***********************************************************************************************************************
+2024-11-08 01:15:13,273 p=4078 u=dharan n=ansible | changed: [44.243.70.217]
+2024-11-08 01:15:13,290 p=4078 u=dharan n=ansible | TASK [Ensure CloudWatch Agent config directory exists] *********************************************************************************************************
+2024-11-08 01:15:16,217 p=4078 u=dharan n=ansible | ok: [44.243.70.217]
+2024-11-08 01:15:16,238 p=4078 u=dharan n=ansible | TASK [Copy CloudWatch configuration file] **********************************************************************************************************************
+2024-11-08 01:15:22,153 p=4078 u=dharan n=ansible | changed: [44.243.70.217]
+2024-11-08 01:15:22,176 p=4078 u=dharan n=ansible | TASK [Fetch CloudWatch Agent configuration] ********************************************************************************************************************
+2024-11-08 01:15:26,557 p=4078 u=dharan n=ansible | changed: [44.243.70.217]
+2024-11-08 01:15:26,609 p=4078 u=dharan n=ansible | PLAY RECAP *****************************************************************************************************************************************************
+2024-11-08 01:15:26,613 p=4078 u=dharan n=ansible | 44.243.70.217              : ok=8    changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
